@@ -6,7 +6,7 @@ theme = "anatole"
 [params]
 title = "Siwen Xiao"
 description = "PhD Student at University of Michigan, Ann Arbor"
-profilePicture = "images/profile.jpg"
+profilePicture = "images/Headshot.jpg"
 customCss = ["css/custom.css"]
 
 # Main page content
