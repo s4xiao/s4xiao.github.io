@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Params.title }}{{ else }}{{ .Title }} · {{ site.Params.title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@300;400;500&display=swap">
+  {{ with resources.Get "css/main.css" }}
+    {{ $css := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ end }}
+  {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">{{ end }}
+</head>
+<body>
+  <div class="page">
+    {{ block "backdrop" . }}{{ end }}
+
+    <header class="masthead">
+      <a class="wordmark" href="{{ "/" | relURL }}">{{ site.Params.title }}</a>
+      <nav class="nav">
+        {{ $current := .RelPermalink }}
+        {{ range site.Menus.main }}
+          <a href="{{ .URL | relURL }}"{{ if eq $current (.URL | relURL) }} class="is-current" aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </header>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="colophon">
+      <a class="colophon__mail" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      <div class="colophon__links">
+        {{ range site.Params.socialIcons }}
+          {{ if ne .title "Email" }}<a href="{{ .url }}" rel="me noopener">{{ .title }}</a>{{ end }}
+        {{ end }}
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

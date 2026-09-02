@@ -1,78 +1,97 @@
 baseURL = 'https://s4xiao.github.io/'
 languageCode = 'en-us'
-title = 'Academic Personal Website'
-theme = "anatole"
+title = 'Siwen Xiao'
 
 [params]
 title = "Siwen Xiao"
-description = "PhD Student at University of Michigan, Ann Arbor"
-profilePicture = "images/profile.jpg"
-customCss = ["css/custom.css"]
+description = "Joint Ph.D. student in Public Policy and Political Science at the University of Michigan, studying science and technology policy, authoritarian politics, and international political economy."
+portrait = "images/profile.jpg"
+email = "siwen@umich.edu"
 
-# Main page content
+# ── Homepage ──────────────────────────────────────────────────────────────
 [params.homepage]
-content = """
-Hi everyone! I am a joint Ph.D. student in Public Policy and Political Science. My research interests lie at the intersections of science and technology policy, authoritarian politics, and international political economy. I previously worked as a researcher at the UC Institute on Global Conflict and Cooperation, where she studied China’s science, technology, innovation, and industrial policies. I holds a Master’s in International Affairs from UC San Diego.
-"""
+eyebrow = "Public Policy & Political Science · Michigan"
+# <em> renders in italic gold; <br> controls the line breaks.
+headline = "Technology,<br>power, and the<br><em>authoritarian</em> state."
+currentlyLabel = "Currently"
+currently = "Joint Ph.D. student,<br>University of Michigan"
+bio = """I study how authoritarian states fund and steer science and technology, and how the resulting capacity reshapes economic statecraft. Before Michigan I was a researcher at the <a href="https://ucigcc.org/">UC Institute on Global Conflict and Cooperation</a>, working on China&rsquo;s science, technology, innovation, and industrial policies. I hold a Master&rsquo;s in International Affairs from UC San Diego."""
+interestsLabel = "Research Interests"
+workLabel = "Selected Work"
 
-# Navigation menu
+# ── Research interests (homepage) ─────────────────────────────────────────
+[[params.interests]]
+numeral = "I"
+title = "Science & Technology Policy"
+text = "How states fund, steer, and capture the direction of technological change."
+
+[[params.interests]]
+numeral = "II"
+title = "Authoritarian Politics"
+text = "Expertise, information, and control inside non-democratic bureaucracies."
+
+[[params.interests]]
+numeral = "III"
+title = "International Political Economy"
+text = "Industrial policy, supply chains, and technological interdependence."
+
+# ── Selected work (homepage) ──────────────────────────────────────────────
+# Replace the bracketed placeholders. Add `url = "..."` to link a title.
+[[params.work]]
+title = "[PAPER TITLE]"
+meta = "with [CO-AUTHOR]<br>[YEAR] · under review"
+
+[[params.work]]
+title = "[PAPER TITLE]"
+meta = "[YEAR] · in progress"
+
+# ── Footer links ──────────────────────────────────────────────────────────
 [[params.socialIcons]]
-icon = "fa-solid fa-envelope"
-title = "Email"
-url = "mailto:your.email@institution.edu"
+title = "Google Scholar"
+url = "https://scholar.google.com/citations?user=Q1JdPS8AAAAJ&hl=en"
 
 [[params.socialIcons]]
-icon = "fa-brands fa-github"
 title = "GitHub"
 url = "https://github.com/s4xiao"
 
 [[params.socialIcons]]
-icon = "fa-brands fa-linkedin"
 title = "LinkedIn"
 url = "https://linkedin.com/"
 
-[[params.socialIcons]]
-icon = "fa-solid fa-graduation-cap"
-title = "Google Scholar"
-url = "https://scholar.google.com/citations?user=Q1JdPS8AAAAJ&hl=en"
-
-# Main menu
+# ── Navigation ────────────────────────────────────────────────────────────
 [[menu.main]]
-name = "Home"
+name = "About"
 identifier = "home"
 weight = 100
 url = "/"
 
 [[menu.main]]
 name = "Research"
-weight = 200
 identifier = "research"
+weight = 200
 url = "/research/"
 
 [[menu.main]]
 name = "Teaching"
-weight = 300
 identifier = "teaching"
+weight = 300
 url = "/teaching/"
 
 [[menu.main]]
 name = "CV"
-weight = 400
 identifier = "cv"
+weight = 400
 url = "/cv/"
 
 [[menu.main]]
 name = "Contact"
-weight = 500
 identifier = "contact"
+weight = 500
 url = "/contact/"
 
-# Syntax highlighting
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    style = "monokai"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark.parser]
+    # single newlines become line breaks — suits address and office-hour blocks
+    hardWraps = true
+  [markup.goldmark.renderer]
+    unsafe = true
