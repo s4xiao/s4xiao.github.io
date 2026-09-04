@@ -45,20 +45,12 @@
   </section>
   {{ end }}
 
-  {{ with site.Params.work }}
-  <section class="work">
-    <div class="section-head">
-      <p class="eyebrow">{{ $home.workLabel | default "Selected Work" }}</p>
-      <a class="eyebrow eyebrow--gold" href="{{ "/research/" | relURL }}">All research &rarr;</a>
-    </div>
-    <ol class="work__list">
-      {{ range . }}
-        <li class="work__item">
-          <h2 class="work__title">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h2>
-          <p class="work__meta">{{ .meta | safeHTML }}</p>
-        </li>
-      {{ end }}
-    </ol>
+  {{ with site.Params.scholar }}
+  <section class="scholar">
+    <p class="eyebrow">{{ .label | default "Research" }}</p>
+    <p class="scholar__line">{{ .text }}
+      <a href="{{ .url }}" rel="noopener">{{ .linkText }} &rarr;</a>
+    </p>
   </section>
   {{ end }}
 {{ end }}

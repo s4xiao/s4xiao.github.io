@@ -4,7 +4,7 @@ title = 'Siwen Xiao'
 
 [params]
 title = "Siwen Xiao"
-description = "Joint Ph.D. student in Public Policy and Political Science at the University of Michigan, studying science and technology policy, authoritarian politics, and international political economy."
+description = "Joint Ph.D. student in Public Policy and Political Science at the University of Michigan, working at the intersection of science, technology, and society (STS) and comparative politics."
 portrait = "images/profile.jpg"
 email = "siwen@umich.edu"
 
@@ -12,38 +12,34 @@ email = "siwen@umich.edu"
 [params.homepage]
 eyebrow = "Public Policy & Political Science · Michigan"
 # <em> renders in italic gold; <br> controls the line breaks.
-headline = "Technology,<br>power, and the<br><em>authoritarian</em> state."
+headline = "Scientific knowledge,<br>power, and<br><em>authoritarianism</em>."
 currentlyLabel = "Currently"
 currently = "Joint Ph.D. student,<br>University of Michigan"
-bio = """I study how authoritarian states fund and steer science and technology, and how the resulting capacity reshapes economic statecraft. Before Michigan I was a researcher at the <a href="https://ucigcc.org/">UC Institute on Global Conflict and Cooperation</a>, working on China&rsquo;s science, technology, innovation, and industrial policies. I hold a Master&rsquo;s in International Affairs from UC San Diego."""
+bio = """I&rsquo;m a joint Ph.D. student in Public Policy and Political Science. My research employs mixed methods and lies at the intersection of science, technology, and society (STS) and comparative politics. In my dissertation project, I use an interpretive approach to study how science education in non-school settings, such as science museums, is shaped by power dynamics and influences public understanding of science. I&rsquo;m also coauthoring on a survey experiment project on the impacts of AI smart glasses on trust and democratic backsliding."""
 interestsLabel = "Research Interests"
-workLabel = "Selected Work"
 
 # ── Research interests (homepage) ─────────────────────────────────────────
 [[params.interests]]
 numeral = "I"
-title = "Science & Technology Policy"
-text = "How states fund, steer, and capture the direction of technological change."
+title = "Power and Knowledge"
+text = "How scientific knowledge is shaped by power dynamics."
 
 [[params.interests]]
 numeral = "II"
-title = "Authoritarian Politics"
-text = "Expertise, information, and control inside non-democratic bureaucracies."
+title = "Authoritarianism"
+text = "How scientific knowledge is shaped by and provides the cognitive foundation for modern authoritarianism."
 
 [[params.interests]]
 numeral = "III"
-title = "International Political Economy"
-text = "Industrial policy, supply chains, and technological interdependence."
+title = "Technology and Society"
+text = "Impacts of new technologies on social power dynamics."
 
-# ── Selected work (homepage) ──────────────────────────────────────────────
-# Replace the bracketed placeholders. Add `url = "..."` to link a title.
-[[params.work]]
-title = "[PAPER TITLE]"
-meta = "with [CO-AUTHOR]<br>[YEAR] · under review"
-
-[[params.work]]
-title = "[PAPER TITLE]"
-meta = "[YEAR] · in progress"
+# ── Research pointer (homepage) ───────────────────────────────────────────
+[params.scholar]
+label = "Research"
+text = "For papers and works in progress, see my"
+linkText = "Google Scholar profile"
+url = "https://scholar.google.com/citations?user=Q1JdPS8AAAAJ&hl=en"
 
 # ── Footer links ──────────────────────────────────────────────────────────
 [[params.socialIcons]]
