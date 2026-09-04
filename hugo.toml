@@ -50,10 +50,6 @@ url = "https://scholar.google.com/citations?user=Q1JdPS8AAAAJ&hl=en"
 title = "GitHub"
 url = "https://github.com/s4xiao"
 
-[[params.socialIcons]]
-title = "LinkedIn"
-url = "https://linkedin.com/"
-
 # ── Navigation ────────────────────────────────────────────────────────────
 [[menu.main]]
 name = "About"
